@@ -1,0 +1,173 @@
+[0m17:35:53.656655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f123ccb6a20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f123b05a7e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f123a96a900>]}
+
+
+============================== 17:35:53.661957 | aa7f5c7f-1e95-4228-b0e6-8077c31165a6 ==============================
+[0m17:35:53.661957 [info ] [MainThread]: Running with dbt=1.9.2
+[0m17:35:53.662395 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/jpbap/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt init', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:35:59.335935 [debug] [MainThread]: Starter project path: /home/jpbap/miniconda3/lib/python3.12/site-packages/dbt/include/starter_project
+[0m17:35:59.344158 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:35:59.344453 [info ] [MainThread]: Setting up your profile.
+[0m17:38:18.569059 [info ] [MainThread]: Profile dbt_project written to /home/jpbap/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:38:18.570940 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 148.58691, "process_in_blocks": "66512", "process_kernel_time": 0.162766, "process_mem_max_rss": "98804", "process_out_blocks": "80", "process_user_time": 0.890429}
+[0m17:38:18.571272 [debug] [MainThread]: Command `dbt init` succeeded at 17:38:18.571192 after 148.59 seconds
+[0m17:38:18.571574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f123ab68bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f123a76f5f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f123ac10aa0>]}
+[0m17:38:18.571864 [debug] [MainThread]: Flushing usage events
+[0m17:38:18.927945 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:41:36.147371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d736158e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d722bd460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d71ba1fa0>]}
+
+
+============================== 17:41:36.152281 | 81e71aff-e117-4526-82b6-b41533facf55 ==============================
+[0m17:41:36.152281 [info ] [MainThread]: Running with dbt=1.9.2
+[0m17:41:36.152700 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/jpbap/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m17:41:36.171974 [info ] [MainThread]: dbt version: 1.9.2
+[0m17:41:36.172320 [info ] [MainThread]: python version: 3.12.9
+[0m17:41:36.172606 [info ] [MainThread]: python path: /home/jpbap/miniconda3/bin/python
+[0m17:41:36.172867 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m17:41:36.258288 [info ] [MainThread]: Using profiles dir at /home/jpbap/.dbt
+[0m17:41:36.258655 [info ] [MainThread]: Using profiles.yml file at /home/jpbap/.dbt/profiles.yml
+[0m17:41:36.258922 [info ] [MainThread]: Using dbt_project.yml file at /home/jpbap/brazilian_ecommerce/dbt_project.yml
+[0m17:41:36.259225 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:41:36.260854 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.15188985, "process_in_blocks": "105192", "process_kernel_time": 0.162353, "process_mem_max_rss": "99056", "process_out_blocks": "16", "process_user_time": 0.878616}
+[0m17:41:36.261171 [debug] [MainThread]: Command `dbt debug` failed at 17:41:36.261095 after 0.15 seconds
+[0m17:41:36.261449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d714f79b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d70fb5940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d713e5370>]}
+[0m17:41:36.261742 [debug] [MainThread]: Flushing usage events
+[0m17:41:36.630390 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:44:36.493612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd56b29e750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd569a246e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd569a247a0>]}
+
+
+============================== 17:44:36.498726 | 840ca377-414e-45d9-b23a-d6d16d82ea2f ==============================
+[0m17:44:36.498726 [info ] [MainThread]: Running with dbt=1.9.2
+[0m17:44:36.499142 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/jpbap/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m17:44:36.515762 [info ] [MainThread]: dbt version: 1.9.2
+[0m17:44:36.516118 [info ] [MainThread]: python version: 3.12.9
+[0m17:44:36.516381 [info ] [MainThread]: python path: /home/jpbap/miniconda3/bin/python
+[0m17:44:36.516643 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m17:44:36.600965 [info ] [MainThread]: Using profiles dir at /home/jpbap/.dbt
+[0m17:44:36.601364 [info ] [MainThread]: Using profiles.yml file at /home/jpbap/.dbt/profiles.yml
+[0m17:44:36.601631 [info ] [MainThread]: Using dbt_project.yml file at /home/jpbap/brazilian_ecommerce/dbt_project.yml
+[0m17:44:36.601957 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:44:36.603830 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.14859155, "process_in_blocks": "104664", "process_kernel_time": 0.100028, "process_mem_max_rss": "99040", "process_out_blocks": "8", "process_user_time": 0.945913}
+[0m17:44:36.604200 [debug] [MainThread]: Command `dbt debug` failed at 17:44:36.604114 after 0.15 seconds
+[0m17:44:36.604476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd569ddb4a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd569856ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd5698979e0>]}
+[0m17:44:36.604787 [debug] [MainThread]: Flushing usage events
+[0m17:44:36.987049 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:46:23.623813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d90618590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d90618470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d90618530>]}
+
+
+============================== 17:46:23.626331 | e91d0c42-e961-42e6-bb98-c75fc20c0803 ==============================
+[0m17:46:23.626331 [info ] [MainThread]: Running with dbt=1.9.2
+[0m17:46:23.626768 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/jpbap/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:46:23.633573 [info ] [MainThread]: dbt version: 1.9.2
+[0m17:46:23.633927 [info ] [MainThread]: python version: 3.12.9
+[0m17:46:23.634196 [info ] [MainThread]: python path: /home/jpbap/miniconda3/bin/python
+[0m17:46:23.634465 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m17:46:23.673563 [info ] [MainThread]: Using profiles dir at /home/jpbap/.dbt
+[0m17:46:23.673956 [info ] [MainThread]: Using profiles.yml file at /home/jpbap/.dbt/profiles.yml
+[0m17:46:23.674227 [info ] [MainThread]: Using dbt_project.yml file at /home/jpbap/brazilian_ecommerce/dbt_project.yml
+[0m17:46:23.674533 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:46:23.675202 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.08858752, "process_in_blocks": "0", "process_kernel_time": 0.098146, "process_mem_max_rss": "99372", "process_out_blocks": "8", "process_user_time": 0.883314}
+[0m17:46:23.675520 [debug] [MainThread]: Command `dbt debug` failed at 17:46:23.675444 after 0.09 seconds
+[0m17:46:23.675798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d908949b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d91063770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d90619c70>]}
+[0m17:46:23.676087 [debug] [MainThread]: Flushing usage events
+[0m17:46:24.044065 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:47:48.384947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3dfd80b8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3dfd601400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3dfd80bd70>]}
+
+
+============================== 17:47:48.387395 | dccd56c5-1c2b-40c7-8e4d-b7e8cf7edb80 ==============================
+[0m17:47:48.387395 [info ] [MainThread]: Running with dbt=1.9.2
+[0m17:47:48.387828 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/home/jpbap/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:47:48.394467 [info ] [MainThread]: dbt version: 1.9.2
+[0m17:47:48.394804 [info ] [MainThread]: python version: 3.12.9
+[0m17:47:48.395082 [info ] [MainThread]: python path: /home/jpbap/miniconda3/bin/python
+[0m17:47:48.395377 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m17:47:48.433884 [info ] [MainThread]: Using profiles dir at /home/jpbap/.dbt
+[0m17:47:48.434229 [info ] [MainThread]: Using profiles.yml file at /home/jpbap/.dbt/profiles.yml
+[0m17:47:48.434499 [info ] [MainThread]: Using dbt_project.yml file at /home/jpbap/brazilian_ecommerce/dbt_project.yml
+[0m17:47:48.434816 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:47:48.435451 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.08815064, "process_in_blocks": "0", "process_kernel_time": 0.077907, "process_mem_max_rss": "99440", "process_out_blocks": "16", "process_user_time": 0.895939}
+[0m17:47:48.435812 [debug] [MainThread]: Command `dbt debug` failed at 17:47:48.435732 after 0.09 seconds
+[0m17:47:48.436079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3dfd799430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3dfd28ffb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3dfd80b8f0>]}
+[0m17:47:48.436367 [debug] [MainThread]: Flushing usage events
+[0m17:47:48.784555 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:50:01.647868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3a98692270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3a98d90b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3a98d93380>]}
+
+
+============================== 17:50:01.652556 | 5c09f967-6bab-4705-8af3-97258ff107b1 ==============================
+[0m17:50:01.652556 [info ] [MainThread]: Running with dbt=1.9.2
+[0m17:50:01.653005 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/jpbap/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:50:01.670644 [info ] [MainThread]: dbt version: 1.9.2
+[0m17:50:01.671005 [info ] [MainThread]: python version: 3.12.9
+[0m17:50:01.671273 [info ] [MainThread]: python path: /home/jpbap/miniconda3/bin/python
+[0m17:50:01.671533 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m17:50:01.756848 [info ] [MainThread]: Using profiles dir at /home/jpbap/.dbt
+[0m17:50:01.757270 [info ] [MainThread]: Using profiles.yml file at /home/jpbap/.dbt/profiles.yml
+[0m17:50:01.757536 [info ] [MainThread]: Using dbt_project.yml file at /home/jpbap/brazilian_ecommerce/dbt_project.yml
+[0m17:50:01.759493 [info ] [MainThread]: adapter type: postgres
+[0m17:50:01.759780 [info ] [MainThread]: adapter version: 1.9.0
+[0m17:50:01.760077 [info ] [MainThread]: Configuration:
+[0m17:50:01.760336 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:50:01.760596 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m17:50:01.760856 [info ] [MainThread]: Required dependencies:
+[0m17:50:01.761173 [debug] [MainThread]: Executing "git --help"
+[0m17:50:01.763608 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:50:01.763929 [debug] [MainThread]: STDERR: "b''"
+[0m17:50:01.764175 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:50:01.764448 [info ] [MainThread]: Connection:
+[0m17:50:01.764726 [info ] [MainThread]:   host: 172.22.64.1
+[0m17:50:01.764985 [info ] [MainThread]:   port: 5432
+[0m17:50:01.765259 [info ] [MainThread]:   user: postgres
+[0m17:50:01.765518 [info ] [MainThread]:   database: stg_brazilian_ecommerce
+[0m17:50:01.765776 [info ] [MainThread]:   schema: public
+[0m17:50:01.766034 [info ] [MainThread]:   connect_timeout: 10
+[0m17:50:01.766340 [info ] [MainThread]:   role: None
+[0m17:50:01.766593 [info ] [MainThread]:   search_path: None
+[0m17:50:01.766855 [info ] [MainThread]:   keepalives_idle: 0
+[0m17:50:01.767152 [info ] [MainThread]:   sslmode: None
+[0m17:50:01.767430 [info ] [MainThread]:   sslcert: None
+[0m17:50:01.767683 [info ] [MainThread]:   sslkey: None
+[0m17:50:01.767932 [info ] [MainThread]:   sslrootcert: None
+[0m17:50:01.768180 [info ] [MainThread]:   application_name: dbt
+[0m17:50:01.768461 [info ] [MainThread]:   retries: 1
+[0m17:50:01.768828 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:50:01.829240 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m17:50:01.866385 [debug] [MainThread]: Using postgres connection "debug"
+[0m17:50:01.866729 [debug] [MainThread]: On debug: select 1 as id
+[0m17:50:01.866962 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:50:01.911977 [debug] [MainThread]: SQL status: SELECT 1 in 0.045 seconds
+[0m17:50:01.912794 [debug] [MainThread]: On debug: Close
+[0m17:50:01.913073 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:50:01.913358 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:50:01.913681 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/jpbap/brazilian_ecommerce/dbt_project.yml> not found
+
+[0m17:50:01.915376 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.3062261, "process_in_blocks": "114408", "process_kernel_time": 0.12485, "process_mem_max_rss": "106720", "process_out_blocks": "24", "process_user_time": 1.018012}
+[0m17:50:01.915717 [debug] [MainThread]: Command `dbt debug` failed at 17:50:01.915640 after 0.31 seconds
+[0m17:50:01.915972 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:50:01.916230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3a985e9430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3a97acbda0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3a9854e4b0>]}
+[0m17:50:01.916538 [debug] [MainThread]: Flushing usage events
+[0m17:50:02.260905 [debug] [MainThread]: An error was encountered while trying to flush usage events
