@@ -1,0 +1,104 @@
+version: 2
+
+sources:
+  - name: brazilian_ecommerce
+    database: stg_brazilian_ecommerce
+    schema: public
+    tables:
+
+      - name: stg_customers
+        columns:
+          - name: customer_unique_id
+            tests:
+              - unique
+              - not_null
+          - name: customer_zip_code_prefix
+            tests:
+              - relationships:
+                  to: source('brazilian_ecommerce', 'stg_geolocations')
+                  field: geolocation_zip_code_prefix
+
+      - name: stg_geolocations
+        columns:
+          - name: geolocation_zip_code_prefix
+            tests:
+              - not_null
+
+      - name: stg_sellers
+        columns:
+          - name: seller_zip_code_prefix
+            tests:
+              - not_null
+              - relationships:
+                  to: source('brazilian_ecommerce', 'stg_geolocations')
+                  field: seller_zip_code_prefix
+      
+      - name: stg_orders_items
+        columns:
+          - name: order_id
+            tests:
+              - not null
+              - relationships:
+                  to: source('brazilian_ecommerce', 'stg_orders')
+                  field: order_id
+          - name: seller_id
+            tests:
+              - not null
+              - relationships:
+                  to: source('brazilian_ecommerce', 'stg_sellers')
+                  field: seller_id
+          - name: product_id
+            tests:
+              - not null
+              - relationships:
+                  to: source('brazilian_ecommerce', 'stg_products')
+                  field: product_id
+      
+      - name: stg_products
+        columns:
+          - name: product_id
+            tests:
+              - not null
+              - unique
+      
+      - name: stg_orders
+        columns:
+          - name: customer_id
+            tests:
+              - not null
+              - relationships:
+                  to: source('brazilian_ecommerce', 'stg_customer')
+                  field: customer_id
+          - name: order_id
+            tests:
+              - not null
+              - unique
+      
+      - name: stg_orders_payments
+        columns:
+          - name: order_id
+            tests:
+              - not null
+              - relationships:
+                  to: source('brazilian_ecommerce', 'stg_orders')
+                  field: order_id
+      
+      - name: stg_orders_reviews
+        columns:
+          - name: order_id
+            tests:
+              - not null
+              - relationships:
+                  to: source('brazilian_ecommerce', 'stg_orders')
+                  field: order_id
+      
+      - name: stg_products_category_name
+        columns:
+          - name: product_category_name
+            tests:
+              - not null
+              - unique
+          - name: product_category_name_english
+            tests:
+              - not null
+      
