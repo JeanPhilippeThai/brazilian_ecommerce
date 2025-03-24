@@ -29,9 +29,11 @@ models:
     stg:
       +materialized: view
       +description: "Nettoyage des données brutes"
+      +profile: raw_dev
     wh:
       +materialized: table
       +description: "Pour stocker les données nettoyées"
+      +profile: wh_dev
     int:
       +materialized: view
       +description: "Pour passer du wh au marts"
