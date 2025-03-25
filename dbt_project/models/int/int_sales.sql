@@ -27,7 +27,6 @@ product_analysis as(
 		count(1) as num_of_orders,
 		wp.dim_product_category,
 		wp.dim_name_length,
-		wp.dim_product_category,
 		wp.dim_product_height_cm,
 		wp.dim_product_length_cm,
 		wp.dim_product_photos_qty,
