@@ -1,3 +1,5 @@
+-- Pour répondre à: QUELS SONT LES DELAIS DE LIVRAISONS ENTRE?
+
 -- Cette vue contient toutes les paires (order_id, customer_id) 
 -- ainsi que toutes les informations temporelles et spatiales de la commande
 

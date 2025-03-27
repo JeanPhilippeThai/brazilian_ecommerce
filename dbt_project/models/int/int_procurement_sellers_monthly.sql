@@ -1,3 +1,5 @@
+-- Pour répondre à: CHEZ QUI ET QUAND SE FOURNIR?
+
 -- Vue qui réunie chaque seller_id avec sa localisation avec
 -- Le montant total et la moyenne des ventes qu'il a fait MENSUELLEMENT
 -- Le montant total et la moyen
@@ -21,6 +23,7 @@ agg_order_items as(
 		dim_order_id,
 		year_shipping_date,
 		month_shipping_date,
+		count(1) as cnt_orders,
 		sum(fct_freight_value) as sum_freight_value,
 		round(avg(fct_freight_value), 2) as avg_freight_value,
 		sum(fct_price) as sum_price,
@@ -48,6 +51,7 @@ agg as(
 		aoi.dim_seller_id, 
 		aoi.year_shipping_date,
 		aoi.month_shipping_date,
+		aoi.cnt_orders,
 		aoi.sum_freight_value,
 		aoi.avg_freight_value,
 		aoi.sum_price,
@@ -64,7 +68,8 @@ agg as(
 		aoi.sum_freight_value,
 		aoi.sum_price,
 		aoi.avg_freight_value,
-		aoi.avg_price
+		aoi.avg_price,
+		aoi.cnt_orders
 )
 select
 	agg.dim_seller_id,
@@ -73,6 +78,7 @@ select
 	ws.dim_seller_zip_code_prefix,
 	agg.year_shipping_date,
 	agg.month_shipping_date,
+	agg.cnt_orders,
 	agg.sum_price,
 	agg.avg_price,
 	agg.sum_freight_value,

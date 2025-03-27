@@ -1,3 +1,5 @@
+-- Pour répondre à: A QUI VENDRE ET OU?
+
 -- Contient chaque order_id avec 
 -- toutes les informations sur le client
 -- la date de la commande

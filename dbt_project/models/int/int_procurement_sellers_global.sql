@@ -1,3 +1,5 @@
+-- Pour répondre à: CHEZ QUI SE FOURNIR?
+
 -- Vue qui réunie chaque seller_id avec sa localisation avec
 -- Le montant total et la moyenne des ventes qu'il a fait DEPUIS QUE LE VENDEUR EXISTE
 -- Le montant total et la moyenne des frais de livraison DEPUIS QUE LE VENDEUR EXISTE
@@ -7,6 +9,7 @@ with agg_order_items as(
 	select
 		dim_seller_id,
 		dim_order_id,
+		count(1) as cnt_orders,
 		sum(fct_freight_value) as sum_freight_value,
 		round(avg(fct_freight_value), 2) as avg_freight_value,
 		sum(fct_price) as sum_price,
@@ -34,6 +37,7 @@ agg as(
 		aoi.dim_seller_id, 
 		aoi.sum_freight_value,
 		aoi.avg_freight_value,
+		aoi.cnt_orders,
 		aoi.sum_price,
 		aoi.avg_price,
 		round(avg(rot.fct_review_score), 2) as avg_review_score,
@@ -41,13 +45,20 @@ agg as(
 	from agg_order_items as aoi
 	join review_on_time as rot
 		on aoi.dim_order_id = rot.dim_order_id
-	group by aoi.dim_seller_id, aoi.sum_freight_value, aoi.sum_price, aoi.avg_freight_value, aoi.avg_price
+	group by
+		aoi.dim_seller_id,
+		aoi.sum_freight_value,
+		aoi.sum_price,
+		aoi.avg_freight_value,
+		aoi.avg_price,
+		aoi.cnt_orders
 )
 select
 	agg.dim_seller_id,
 	ws.dim_seller_state,
 	ws.dim_seller_city,
 	ws.dim_seller_zip_code_prefix,
+	agg.cnt_orders,
 	agg.sum_price,
 	agg.avg_price,
 	agg.sum_freight_value,
