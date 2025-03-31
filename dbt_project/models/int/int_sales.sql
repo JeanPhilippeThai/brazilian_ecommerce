@@ -37,7 +37,7 @@ product_analysis as(
 		c.dim_customer_zip_code_prefix,
 		c.dim_customer_state,
 		c.dim_customer_city,
-		sum(fct_price),
+		sum(fct_price) as sum_price,
 		count(1) as num_of_orders,
 		wp.dim_name_length,
 		wp.dim_product_category,
