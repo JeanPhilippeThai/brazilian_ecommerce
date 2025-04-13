@@ -1,5 +1,4 @@
-from procurement_monthly import init_procurement_monthly
-from procurement_monthly import ytoy_ca_fournisseur
+from procurement_monthly import init_procurement_monthly, ytoy_ca_fournisseur
 
 def main():
 
