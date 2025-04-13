@@ -1,9 +1,9 @@
 import pandas as pd
+from connexion_postgresql import get_df
 
 # RECUPERATION DES DONNEES DU FICHIER
-def init_procurement_monthly():
-    # Récupérer les données
-    file_name = "mart_procurement_monthly.csv"    
+def init_procurement_monthly(file_name):
+    # Récupérer les données  
     columns_names = ["dim_seller_id", "dim_seller_state", "dim_seller_city", "dim_seller_zip_code_prefix",\
                      "year_shipping_date", "month_shipping_date", "cnt_orders", "sum_price", "avg_price",\
                      "sum_freight_value", "avg_freight_value", "prct_delivery_on_time", "avg_review_score"]
