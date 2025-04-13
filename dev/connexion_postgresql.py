@@ -10,7 +10,7 @@ DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_PORT")
 
 
-"""Récupère table_name sous forme de dataframe """
+# Récupère table_name sous forme de dataframe
 def get_df(table_name):
     try:
         # Vérification du nom de la table pour éviter l'injection SQL
