@@ -1,5 +1,11 @@
+from procurement_monthly import init_procurement_monthly
+from procurement_monthly import ytoy_ca_fournisseur
+
 def main():
-    df_procurement_monthly = init_procurement_monthly()
+
+    # ACCOMPAGNEMENT DES FOURNISSEURS A HAUT POTENTIELS
+    file_name = "mart_procurement_monthly.csv"
+    df_procurement_monthly = init_procurement_monthly(file_name)
     top_supplier = ytoy_ca_fournisseur(df_procurement_monthly)
     
     # Table des 10000 fournisseurs avec la meilleure croissance de CA année après année, avec un minimum de 10000 R$ de CA.
