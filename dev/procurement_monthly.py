@@ -4,22 +4,18 @@ from connexion_postgresql import get_df
 # RECUPERATION DES DONNEES DU FICHIER
 def init_procurement_monthly(file_name):
     # Récupérer les données  
-    columns_names = ["dim_seller_id", "dim_seller_state", "dim_seller_city", "dim_seller_zip_code_prefix",\
-                     "year_shipping_date", "month_shipping_date", "cnt_orders", "sum_price", "avg_price",\
-                     "sum_freight_value", "avg_freight_value", "prct_delivery_on_time", "avg_review_score"]
-    df = pd.read_csv(file_name, names = columns_names, header=None)
+    df = get_df(file_name)
     
     # Garder seulement les colonnes qui nous intéressent
-    df_copy = df[["dim_seller_id", "dim_seller_state", "year_shipping_date", "month_shipping_date", "sum_price", "sum_freight_value", "prct_delivery_on_time", "avg_review_score"]].copy()
-    
-    df_copy = df_copy[(df_copy["year_shipping_date"] >=2016) & (df_copy["year_shipping_date"] <=2018)]
-    return df_copy
+    df= df[["dim_seller_id", "dim_seller_state", "year_shipping_date", "month_shipping_date", "sum_price", "sum_freight_value", "prct_delivery_on_time", "avg_review_score"]]
+    df = df[(df["year_shipping_date"] >=2016) & (df["year_shipping_date"] <=2018)]
+    return df
 
 
 ## EVOLUTION YtoY du CA fournisseur
-def ytoy_ca_fournisseur(df_copy):
+def ytoy_ca_fournisseur(df):
     # Calcul du CA de chaque fournisseur, chaque année
-    ytoy_turnover = df_copy.groupby(["dim_seller_id", "year_shipping_date"])["sum_price"].sum().reset_index()
+    ytoy_turnover = df.groupby(["dim_seller_id", "year_shipping_date"])["sum_price"].sum().reset_index()
 
     # Jointure previous year / current year pour pouvoir les comparer
     ytoy_turnover['previous_year'] = ytoy_turnover['year_shipping_date'] - 1
