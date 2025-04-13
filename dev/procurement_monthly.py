@@ -7,7 +7,7 @@ def init_procurement_monthly(file_name):
     df = get_df(file_name)
     
     # Garder seulement les colonnes qui nous intéressent
-    df= df[["dim_seller_id", "dim_seller_state", "year_shipping_date", "month_shipping_date", "sum_price", "sum_freight_value", "prct_delivery_on_time", "avg_review_score"]]
+    df = df[["dim_seller_id", "dim_seller_state", "year_shipping_date", "month_shipping_date", "sum_price", "sum_freight_value", "prct_delivery_on_time", "avg_review_score"]]
     df = df[(df["year_shipping_date"] >=2016) & (df["year_shipping_date"] <=2018)]
     return df
 
