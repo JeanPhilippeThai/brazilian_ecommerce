@@ -33,24 +33,22 @@ def insatisfied_customers(df):
         fct_order_count=("dim_customer_id", "count")
     ).reset_index()
     
-    # Sort by lowest average score
-    insatisfied = insatisfied.sort_values(by="fct_avg_review_score", ascending=True)
-    
-    # Take the top 100
-    insatisfied = insatisfied.head(100)
-    
+    # Seulement les clients insatisfaits
+    insatisfied = insatisfied[insatisfied["fct_avg_review_score"] < 4]
+
+    # Calculs des métriques des clients insatisfaits
     insatisfied_result = insatisfied.agg({
         "fct_order_count": "mean",
         "fct_review_count": "mean",
         "fct_avg_review_score": "mean"
     }).to_frame().T
     
-    insatisfied_result = insatisfied_result.round(0).astype(int)
+    insatisfied_result = insatisfied_result.round(1).astype(float)
     
     insatisfied_result.rename(columns={
-        "fct_order_count": "Nombre de commande",
-        "fct_review_count": "Nombre de review publiées",
-        "fct_avg_review_score": "Moyenne de la note donnée"
+        "fct_order_count": "Nombre de commandes moyen",
+        "fct_review_count": "Nombre de review publiées moyen",
+        "fct_avg_review_score": "Note donnée moyenne"
     }, inplace=True)
 
     return insatisfied_result
@@ -64,12 +62,12 @@ def plot_insatisfied_customers():
     sns.barplot(data=data, x="Metric", y="Value", palette="Set2")
     
     # Titre
-    plt.title("Les clients insatisfaits le font savoir et ne reviennent pas", fontsize=12)
+    plt.title("Les clients insatisfaits le font savoir (note < 4) et ne reviennent pas", fontsize=12)
     
-    # Affichage des valeurs sur les barres (en entier)
+    # Affichage des valeurs sur les barres
     for i, val in enumerate(data["Value"]):
-        plt.text(i, val + val * 0.01, f"{int(val)}", ha='center', va='bottom')
-    
+        plt.text(i, val + val * 0.01, f"{val:.1f}", ha='center', va='bottom')
+        
     plt.ylabel(None)
     plt.xlabel("")
     plt.yticks(range(0, 6, 1))
