@@ -1,5 +1,5 @@
 # Analyse et recommandation d'axes de développement commercial pour l'entreprise Olist
-Stack: Python, PostgreSQL, DBT, Tableau, Ubuntu, Github + Airflow à venir
+Stack: Python, PostgreSQL, DBT, Tableau, Ubuntu, Github
 
 Olist est une “plateforme d'intégration de marketplaces”, c’est-à-dire une plateforme qui aide des fournisseurs à vendre leurs produits sur des grandes marketplaces existantes comme Amazon.  
 **Le but du projet est d’analyser et de proposer des axes de croissance à l’entreprise Olist en analysant leurs ventes.**
