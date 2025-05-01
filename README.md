@@ -18,7 +18,7 @@ Dans un second temps, l'analyse et la visualisation des données se font sur Tab
 
 ## Processus ELT
 
-![graph](https://github.com/user-attachments/assets/a7b09f46-dce2-4f59-828c-2b26723c4a24)
+![graph](https://github.com/user-attachments/assets/9174d76f-a3d2-4362-8064-b54ce3c8e908)
 |:--:|
 | *Image 2 - Schéma ELT* |
 
