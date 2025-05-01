@@ -18,7 +18,7 @@ Dans un second temps, l'analyse et la visualisation des données se font sur Tab
 
 ## Processus ELT
 
-![schema etl drawio](https://github.com/user-attachments/assets/9257267e-3be9-4ed9-94f7-bf64e378c1b3)
+![graph](https://github.com/user-attachments/assets/a7b09f46-dce2-4f59-828c-2b26723c4a24)
 |:--:|
 | *Image 2 - Schéma ELT* |
 
