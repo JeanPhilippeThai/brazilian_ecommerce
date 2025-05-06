@@ -5,7 +5,7 @@
 Olist est une “plateforme d'intégration de marketplaces”, c’est-à-dire une plateforme qui aide des fournisseurs à vendre leurs produits sur des grandes marketplaces existantes comme Amazon.  
 **Le but est d’analyser et de proposer des axes de croissance à l’entreprise Olist en analysant leurs ventes.**
 
-Le projet est composé d'un ELT principalement géré avec DBT (dossier "dbt_project" dans le repo).  
+Le projet est composé d'un ELT principalement géré avec DBT.
 **Les principales transformation sont dans dbt_project/model/int**
 Dans un second temps, l'analyse et la visualisation des données se font sur Tableau, pandas+seaborn, Excel (dossier "dev" dans le repo).
 
